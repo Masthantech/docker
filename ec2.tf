@@ -6,10 +6,10 @@ resource "aws_instance" "docker" {
 
     user_data = file("docker.sh")
 
-    root_block_device {
-        volume_size = 50
-        volume_type = "gp3"
-    }
+    # root_block_device {
+    #     volume_size = 50
+    #     volume_type = "gp3"
+    # }
 
     tags = {
         Name = "${var.project}-${var.environment}-docker"
